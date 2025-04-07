@@ -85,7 +85,7 @@ Initialize the Airflow DB (if not done already)
 
 Start the Airflow scheduler and webserver
 
-Visit: http://localhost:8080
+Visit: http://localhost:8082
 
 ## ▶️ 4. Trigger the DAG
 In the Airflow UI, trigger the DAG named: real_time_pipeline_dag
