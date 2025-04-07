@@ -26,15 +26,15 @@ Instructions for running services, environment setup, and troubleshooting common
 - Integration between Kafka and Cassandra
 - Using Airflow for automation
 
-## 🧪 How to Run (Locally in WSL2)
-# 🔧 Prerequisites
+# 🧪 How to Run (Locally in WSL2)
+## 🔧 Prerequisites
  WSL2 with Ubuntu
 
  Python 3.10+ installed
 
  Apache Spark, Kafka, Cassandra installed in ~/
 
- #Virtual environments for each service:
+ ## Virtual environments for each service:
 
 ~/kafka_env
 
@@ -48,7 +48,7 @@ Instructions for running services, environment setup, and troubleshooting common
 
 airflow.cfg
 
-# DAGs folder
+## DAGs folder
 
 SQLite DB (airflow.db)
 
@@ -56,16 +56,16 @@ SQLite DB (airflow.db)
 
  run_airflow.sh to launch Airflow
 
-# ▶️ 1. Clone the Repo
+## ▶️ 1. Clone the Repo
 
 git clone https://github.com/your-username/real-time-data-streaming.git
 
 cd real_time_data_streaming
-# ▶️ 2. Start All Backend Services (Kafka, Spark, Cassandra)
+## ▶️ 2. Start All Backend Services (Kafka, Spark, Cassandra)
 
 bash script/run_services.sh
 
-# ✅ This will:
+## ✅ This will:
 
 Start Kafka with zookeeper
 
@@ -75,9 +75,9 @@ Start Spark Master & Spark Worker
 
 Each service logs to your home directory (e.g., ~/kafka.log, ~/spark-master.log)
 
-# ▶️ 3. Start Apache Airflow
+## ▶️ 3. Start Apache Airflow
 bash script/run_airflow.sh
-# ✅ This will:
+## ✅ This will:
 
 Activate the airflow_env virtual environment
 
@@ -87,12 +87,12 @@ Start the Airflow scheduler and webserver
 
 Visit: http://localhost:8080
 
-# ▶️ 4. Trigger the DAG
+## ▶️ 4. Trigger the DAG
 In the Airflow UI, trigger the DAG named: real_time_pipeline_dag
 
 This will fetch user data from an API and send it to the Kafka topic (user_data)
 
-# ▶️ 5. Run Spark Streaming Script
+## ▶️ 5. Run Spark Streaming Script
 source ~/spark_env/bin/activate
 
 spark-submit \
@@ -100,7 +100,7 @@ spark-submit \
   --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,\
               com.datastax.spark:spark-cassandra-connector_2.12:3.5.0 \
   spark_stream.py
-# ✅ This will:
+## ✅ This will:
 
 Read data from Kafka
 
@@ -108,9 +108,9 @@ Process and transform the stream
 
 Insert the transformed data into a Cassandra table
 
-# ▶️ 6. Monitor Kafka Topics (AKHQ Optional)
+## ▶️ 6. Monitor Kafka Topics (AKHQ Optional)
 java -Dconfig.file=application.conf -jar akhq.jar
 Then visit http://localhost:8081 to inspect Kafka topics.
 
-# 🧼 Stop All Services
+## 🧼 Stop All Services
 bash script/stop_services.sh
