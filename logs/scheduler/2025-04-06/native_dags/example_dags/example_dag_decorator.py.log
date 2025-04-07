@@ -1,0 +1,22 @@
+[2025-04-06T06:36:45.860+0000] {processor.py:186} INFO - Started process (PID=898) to work on /home/user/airflow_env/lib/python3.12/site-packages/airflow/example_dags/example_dag_decorator.py
+[2025-04-06T06:36:45.862+0000] {processor.py:914} INFO - Processing file /home/user/airflow_env/lib/python3.12/site-packages/airflow/example_dags/example_dag_decorator.py for tasks to queue
+[2025-04-06T06:36:45.866+0000] {logging_mixin.py:190} INFO - [2025-04-06T06:36:45.866+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/user/airflow_env/lib/python3.12/site-packages/airflow/example_dags/example_dag_decorator.py
+[2025-04-06T06:36:45.993+0000] {processor.py:925} INFO - DAG(s) 'example_dag_decorator' retrieved from /home/user/airflow_env/lib/python3.12/site-packages/airflow/example_dags/example_dag_decorator.py
+[2025-04-06T06:36:46.330+0000] {logging_mixin.py:190} INFO - [2025-04-06T06:36:46.329+0000] {override.py:1930} INFO - Created Permission View: can read on DAG:example_dag_decorator
+[2025-04-06T06:36:46.420+0000] {logging_mixin.py:190} INFO - [2025-04-06T06:36:46.419+0000] {override.py:1930} INFO - Created Permission View: can delete on DAG:example_dag_decorator
+[2025-04-06T06:36:46.527+0000] {logging_mixin.py:190} INFO - [2025-04-06T06:36:46.525+0000] {override.py:1930} INFO - Created Permission View: can edit on DAG:example_dag_decorator
+[2025-04-06T06:36:46.693+0000] {logging_mixin.py:190} INFO - [2025-04-06T06:36:46.692+0000] {override.py:1930} INFO - Created Permission View: can read on DAG Run:example_dag_decorator
+[2025-04-06T06:36:46.784+0000] {logging_mixin.py:190} INFO - [2025-04-06T06:36:46.783+0000] {override.py:1930} INFO - Created Permission View: can create on DAG Run:example_dag_decorator
+[2025-04-06T06:36:46.876+0000] {logging_mixin.py:190} INFO - [2025-04-06T06:36:46.875+0000] {override.py:1930} INFO - Created Permission View: can delete on DAG Run:example_dag_decorator
+[2025-04-06T06:36:46.965+0000] {logging_mixin.py:190} INFO - [2025-04-06T06:36:46.965+0000] {override.py:1930} INFO - Created Permission View: menu access on DAG Run:example_dag_decorator
+[2025-04-06T06:36:46.967+0000] {logging_mixin.py:190} INFO - [2025-04-06T06:36:46.967+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-06T06:36:47.014+0000] {logging_mixin.py:190} INFO - [2025-04-06T06:36:47.013+0000] {dag.py:3262} INFO - Creating ORM DAG for example_dag_decorator
+[2025-04-06T06:36:47.016+0000] {logging_mixin.py:190} INFO - [2025-04-06T06:36:47.016+0000] {dag.py:4180} INFO - Setting next_dagrun for example_dag_decorator to None, run_after=None
+[2025-04-06T06:36:47.195+0000] {processor.py:208} INFO - Processing /home/user/airflow_env/lib/python3.12/site-packages/airflow/example_dags/example_dag_decorator.py took 1.343 seconds
+[2025-04-06T06:38:46.229+0000] {processor.py:186} INFO - Started process (PID=963) to work on /home/user/airflow_env/lib/python3.12/site-packages/airflow/example_dags/example_dag_decorator.py
+[2025-04-06T06:38:46.232+0000] {processor.py:914} INFO - Processing file /home/user/airflow_env/lib/python3.12/site-packages/airflow/example_dags/example_dag_decorator.py for tasks to queue
+[2025-04-06T06:38:46.236+0000] {logging_mixin.py:190} INFO - [2025-04-06T06:38:46.236+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/user/airflow_env/lib/python3.12/site-packages/airflow/example_dags/example_dag_decorator.py
+[2025-04-06T06:38:46.304+0000] {processor.py:925} INFO - DAG(s) 'example_dag_decorator' retrieved from /home/user/airflow_env/lib/python3.12/site-packages/airflow/example_dags/example_dag_decorator.py
+[2025-04-06T06:38:46.354+0000] {logging_mixin.py:190} INFO - [2025-04-06T06:38:46.354+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-06T06:38:46.381+0000] {logging_mixin.py:190} INFO - [2025-04-06T06:38:46.381+0000] {dag.py:4180} INFO - Setting next_dagrun for example_dag_decorator to None, run_after=None
+[2025-04-06T06:38:46.516+0000] {processor.py:208} INFO - Processing /home/user/airflow_env/lib/python3.12/site-packages/airflow/example_dags/example_dag_decorator.py took 0.297 seconds

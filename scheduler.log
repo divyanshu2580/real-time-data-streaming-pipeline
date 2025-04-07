@@ -1,0 +1,58 @@
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+[2025-04-07T10:32:17.046+0000] {executor_loader.py:258} INFO - Loaded executor: SequentialExecutor
+[2025-04-07T10:32:17.085+0000] {scheduler_job_runner.py:950} INFO - Starting the scheduler
+[2025-04-07 10:32:17 +0000] [7151] [INFO] Starting gunicorn 23.0.0
+[2025-04-07T10:32:17.086+0000] {scheduler_job_runner.py:957} INFO - Processing each file at most -1 times
+[2025-04-07 10:32:17 +0000] [7151] [INFO] Listening at: http://[::]:8793 (7151)
+[2025-04-07 10:32:17 +0000] [7151] [INFO] Using worker: sync
+[2025-04-07T10:32:17.093+0000] {manager.py:174} INFO - Launched DagFileProcessorManager with pid: 7152
+[2025-04-07T10:32:17.094+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-04-07 10:32:17 +0000] [7153] [INFO] Booting worker with pid: 7153
+[2025-04-07T10:32:17.100+0000] {settings.py:63} INFO - Configured default timezone UTC
+[2025-04-07 10:32:17 +0000] [7154] [INFO] Booting worker with pid: 7154
+[2025-04-07T10:33:04.199+0000] {scheduler_job_runner.py:435} INFO - 1 tasks up for execution:
+	<TaskInstance: User_Automation.stream_data_from_api manual__2025-04-07T10:33:03.569260+00:00 [scheduled]>
+[2025-04-07T10:33:04.200+0000] {scheduler_job_runner.py:507} INFO - DAG User_Automation has 0/16 running and queued tasks
+[2025-04-07T10:33:04.201+0000] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+	<TaskInstance: User_Automation.stream_data_from_api manual__2025-04-07T10:33:03.569260+00:00 [scheduled]>
+[2025-04-07T10:33:04.211+0000] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: User_Automation.stream_data_from_api manual__2025-04-07T10:33:03.569260+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-04-07T10:33:04.213+0000] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='User_Automation', task_id='stream_data_from_api', run_id='manual__2025-04-07T10:33:03.569260+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 1 and queue default
+[2025-04-07T10:33:04.214+0000] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'User_Automation', 'stream_data_from_api', 'manual__2025-04-07T10:33:03.569260+00:00', '--local', '--subdir', 'DAGS_FOLDER/kafka_stream.py']
+[2025-04-07T10:33:04.217+0000] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'User_Automation', 'stream_data_from_api', 'manual__2025-04-07T10:33:03.569260+00:00', '--local', '--subdir', 'DAGS_FOLDER/kafka_stream.py']
+[2025-04-07T10:33:06.591+0000] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/user/OneDrive/Desktop/real_time_data_streaming/dags/kafka_stream.py
+[2025-04-07T10:33:06.879+0000] {task_command.py:467} INFO - Running <TaskInstance: User_Automation.stream_data_from_api manual__2025-04-07T10:33:03.569260+00:00 [queued]> on host Divyanshu.
+[2025-04-07T10:34:08.169+0000] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='User_Automation', task_id='stream_data_from_api', run_id='manual__2025-04-07T10:33:03.569260+00:00', try_number=1, map_index=-1)
+[2025-04-07T10:34:08.177+0000] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=User_Automation, task_id=stream_data_from_api, run_id=manual__2025-04-07T10:33:03.569260+00:00, map_index=-1, run_start_date=2025-04-07 10:33:07.003058+00:00, run_end_date=2025-04-07 10:34:07.659346+00:00, run_duration=60.656288, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=5, job_id=121, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2025-04-07 10:33:04.203524+00:00, queued_by_job_id=120, pid=7209
+[2025-04-07T10:34:08.210+0000] {job.py:229} INFO - Heartbeat recovered after 65.11 seconds
+[2025-04-07T10:34:08.268+0000] {dagrun.py:854} INFO - Marking run <DagRun User_Automation @ 2025-04-07 10:33:03.569260+00:00: manual__2025-04-07T10:33:03.569260+00:00, state:running, queued_at: 2025-04-07 10:33:03.610233+00:00. externally triggered: True> successful
+[2025-04-07T10:34:08.269+0000] {dagrun.py:905} INFO - DagRun Finished: dag_id=User_Automation, execution_date=2025-04-07 10:33:03.569260+00:00, run_id=manual__2025-04-07T10:33:03.569260+00:00, run_start_date=2025-04-07 10:33:04.145371+00:00, run_end_date=2025-04-07 10:34:08.269856+00:00, run_duration=64.124485, state=success, external_trigger=True, run_type=manual, data_interval_start=2025-04-06 00:00:00+00:00, data_interval_end=2025-04-07 00:00:00+00:00, dag_hash=a91647b072875af9fbfbaa085889969c
+[2025-04-07T10:37:39.603+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-04-07T10:43:02.854+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-04-07 10:46:13 +0000] [7151] [INFO] Handling signal: winch
+[2025-04-07 10:46:13 +0000] [7151] [INFO] Handling signal: winch
+[2025-04-07 10:46:13 +0000] [7151] [INFO] Handling signal: winch
+[2025-04-07 10:46:13 +0000] [7151] [INFO] Handling signal: winch
+[2025-04-07 10:46:14 +0000] [7151] [INFO] Handling signal: winch
+[2025-04-07 10:46:14 +0000] [7151] [INFO] Handling signal: winch
+[2025-04-07 10:46:14 +0000] [7151] [INFO] Handling signal: winch
+[2025-04-07 10:46:14 +0000] [7151] [INFO] Handling signal: winch
+[2025-04-07 10:46:16 +0000] [7151] [INFO] Handling signal: winch
+[2025-04-07 10:46:16 +0000] [7151] [INFO] Handling signal: winch
+[2025-04-07 10:46:16 +0000] [7151] [INFO] Handling signal: winch
+[2025-04-07T10:48:31.464+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-04-07T10:53:57.797+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-04-07T10:59:21.781+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-04-07T11:04:48.098+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-04-07T11:10:14.934+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-04-07T11:17:36.690+0000] {job.py:229} INFO - Heartbeat recovered after 146.43 seconds
+[2025-04-07T11:18:01.691+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-04-07T11:23:27.038+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-04-07T11:28:50.919+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-04-07T11:34:16.987+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-04-07T11:39:45.745+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-04-07T11:45:11.649+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-04-07T11:50:37.499+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs

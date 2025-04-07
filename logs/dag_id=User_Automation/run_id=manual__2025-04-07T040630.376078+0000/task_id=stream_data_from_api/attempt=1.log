@@ -1,0 +1,24 @@
+[2025-04-07T04:07:37.694+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-07T04:07:37.723+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: User_Automation.stream_data_from_api manual__2025-04-07T04:06:30.376078+00:00 [queued]>
+[2025-04-07T04:07:37.737+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: User_Automation.stream_data_from_api manual__2025-04-07T04:06:30.376078+00:00 [queued]>
+[2025-04-07T04:07:37.739+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 6
+[2025-04-07T04:07:37.764+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): stream_data_from_api> on 2025-04-07 04:06:30.376078+00:00
+[2025-04-07T04:07:37.772+0000] {standard_task_runner.py:72} INFO - Started process 2268 to run task
+[2025-04-07T04:07:37.776+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'User_Automation', 'stream_data_from_api', 'manual__2025-04-07T04:06:30.376078+00:00', '--job-id', '118', '--raw', '--subdir', 'DAGS_FOLDER/kafka_stream.py', '--cfg-path', '/tmp/tmpp2jne1jw']
+[2025-04-07T04:07:37.780+0000] {standard_task_runner.py:105} INFO - Job 118: Subtask stream_data_from_api
+[2025-04-07T04:07:37.880+0000] {task_command.py:467} INFO - Running <TaskInstance: User_Automation.stream_data_from_api manual__2025-04-07T04:06:30.376078+00:00 [running]> on host Divyanshu.
+[2025-04-07T04:07:37.992+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='divyanshu' AIRFLOW_CTX_DAG_ID='User_Automation' AIRFLOW_CTX_TASK_ID='stream_data_from_api' AIRFLOW_CTX_EXECUTION_DATE='2025-04-07T04:06:30.376078+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-07T04:06:30.376078+00:00'
+[2025-04-07T04:07:37.995+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-07T04:07:38.145+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
+[2025-04-07T04:07:38.155+0000] {conn.py:615} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=localhost:9092 <checking_api_versions_recv> [IPv4 ('127.0.0.1', 9092)]>: Broker version identified as 2.6
+[2025-04-07T04:07:38.158+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+[2025-04-07T04:07:41.730+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
+[2025-04-07T04:07:41.734+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+[2025-04-07T04:07:41.738+0000] {conn.py:936} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+[2025-04-07T04:08:38.222+0000] {conn.py:936} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+[2025-04-07T04:08:38.225+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-07T04:08:38.247+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-07T04:08:38.249+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=User_Automation, task_id=stream_data_from_api, run_id=manual__2025-04-07T04:06:30.376078+00:00, execution_date=20250407T040630, start_date=20250407T040737, end_date=20250407T040838
+[2025-04-07T04:08:38.304+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-07T04:08:38.331+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-07T04:08:38.335+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
